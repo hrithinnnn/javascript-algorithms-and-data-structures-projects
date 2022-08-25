@@ -1,0 +1,33 @@
+function convertToRoman(num) {
+ const arr1000=["M","MM","MMM"]
+ const arr100=["C","CC","CCC","CD","D","DC","DCC","DCCC","CM"]
+ const arr10=["X","XX","XXX","XL","L","LX","LXX","LXXX","XC"]
+ const arr1=["I","II","III","IV","V","VI","VII","VIII","IX"]
+ var res=[]
+ let resArr="";
+  if(Math.floor(num/1000)>0){
+    res.push(arr1000[Math.floor(num/1000)-1])
+    num%=1000
+  }
+  if(Math.floor(num/100)>0){
+    res.push(arr100[Math.floor(num/100)-1])
+    num%=100
+  }
+  if(Math.floor(num/10)>0){
+    res.push(arr10[Math.floor(num/10)-1])
+    num%=10
+  }
+    if(Math.floor(num/1)>0){
+    res+=arr1[Math.floor(num/1)-1]
+    num%=1
+  }
+  for(var i=0;i<res.length;i++){
+    if(res[i]!=','){
+      resArr+=res[i]
+    }
+  }
+   console.log(resArr)
+   return resArr;
+}
+
+convertToRoman(2014);
