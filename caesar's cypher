@@ -1,0 +1,21 @@
+function rot13(str) {
+   var alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ .,?!";
+  var rot = "NOPQRSTUVWXYZABCDEFGHIJKLM .,?!";
+  let aa=alphabet.split("")
+  let ra=rot.split("")
+  let sa=str.split("")
+  var result=""
+  var resultArr=[]
+  for(var i=0;i<str.length;i++){
+    for(var j=0;j<ra.length;j++){
+    if(sa[i]===aa[j]){
+      resultArr.push(ra[j])
+    }
+  }
+  }
+  result=resultArr.join("")
+  console.log(result)
+  return result;
+}
+
+rot13("SERR PBQR PNZC");
