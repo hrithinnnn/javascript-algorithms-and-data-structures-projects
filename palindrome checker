@@ -1,0 +1,21 @@
+
+function palindrome(str) {
+ let word=""
+ let wordrev=""
+ for(var i=0;i<str.length;i++){
+  if((str[i]>='A'&&str[i]<='z'&&str[i]!='_')||str[i]>='0'&&str[i]<='9'){
+    word+=str[i]
+  }
+ }
+for(var i=str.length;i>=0;i--){
+  if(str[i]>='A'&&str[i]<='z'&&str[i]!='_'||str[i]>='0'&&str[i]<='9'){
+    wordrev+=str[i]
+  }
+ }
+ console.log(word)
+ if(word.toUpperCase()===wordrev.toUpperCase())
+  return true;
+return false;
+}
+
+palindrome("0_0 (: /-\ :) 0-0");
